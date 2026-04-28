@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertex Automations — Brand Identity Kit v1.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --crimson:#BF1040;--rose:#F0647A;--mid:#D83562;
+  --blue:#0A84FF;--blue-deep:#0A66C2;--blue-hover:#0758C7;
+  --black:#0D0D0F;--dark-bg:#0A0A0B;--dark-s:#141416;--dark-s2:#1E1E22;
+  --n50:#F8F9FA;--n100:#F1F3F5;--n200:#E9ECEF;--n300:#DEE2E6;
+  --n400:#CED4DA;--n500:#ADB5BD;--n600:#868E96;--n700:#495057;
+  --n800:#343A40;--n900:#212529;
+  --grad:linear-gradient(135deg,#F0647A 0%,#D83562 50%,#BF1040 100%);
+  --grad-h:linear-gradient(90deg,#F0647A 0%,#BF1040 100%);
+  --r:14px;--r-sm:8px;--r-lg:20px;
+  --sh:0 4px 24px rgba(13,13,15,.08),0 1px 4px rgba(13,13,15,.04);
+  --sh-lg:0 8px 40px rgba(13,13,15,.12),0 2px 8px rgba(13,13,15,.06);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--n100);color:var(--n900);line-height:1.6}
+
+/* ── SECTIONS ────────────────────────────────────── */
+.sec{padding:80px 80px;border-bottom:1px solid var(--n200)}
+.sec-w{background:#fff}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:6px}
+.sec-title{font-family:'Orbitron',sans-serif;font-size:36px;font-weight:700;color:var(--black);letter-spacing:.04em;text-transform:uppercase;line-height:1.1;margin-bottom:8px}
+.sec-rule{width:72px;height:3px;background:var(--grad-h);border-radius:2px;margin-bottom:14px}
+.sec-desc{font-size:15px;color:var(--n600);line-height:1.7;max-width:720px;margin-bottom:48px}
+.sub-title{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--n900);margin:40px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--n200);display:flex;align-items:center;gap:8px}
+.sub-title::before{content:'';display:block;width:3px;height:15px;background:var(--grad-h);border-radius:2px;flex-shrink:0}
+
+/* ── COVER ───────────────────────────────────────── */
+.cover{min-height:100vh;background:var(--dark-bg);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px;text-align:center}
+.cov-top{position:absolute;top:0;left:0;right:0;height:7px;background:var(--grad-h)}
+.cov-bot{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad-h)}
+.cov-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(191,16,64,.07) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cov-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.cov-icon{position:relative;width:148px;height:92px;margin-bottom:36px}
+.ci{position:absolute;border-radius:12px}
+.ci1{width:52px;height:52px;top:0;left:0;background:#F0647A;box-shadow:0 8px 32px rgba(240,100,122,.4)}
+.ci2{width:52px;height:52px;top:0;left:64px;background:linear-gradient(135deg,#F0647A,#D83562)}
+.ci3{width:52px;height:52px;top:40px;left:32px;background:linear-gradient(135deg,#D83562,#BF1040)}
+.ci4{width:52px;height:52px;top:40px;left:96px;background:#BF1040;box-shadow:0 8px 32px rgba(191,16,64,.4)}
+.cov-vertex{font-family:'Orbitron',sans-serif;font-size:60px;font-weight:900;letter-spacing:.12em;color:#fff;text-transform:uppercase;line-height:1}
+.cov-auto{font-family:'Orbitron',sans-serif;font-size:18px;font-weight:500;letter-spacing:.32em;color:#9B9BA8;text-transform:uppercase;margin-top:6px;margin-bottom:36px}
+.cov-div{width:220px;height:1px;background:linear-gradient(90deg,transparent,#BF1040,#F0647A,transparent);margin:0 auto 28px}
+.cov-kit{font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;letter-spacing:.12em;color:#fff;text-transform:uppercase;margin-bottom:8px}
+.cov-kitsub{font-size:12px;font-weight:300;color:#9B9BA8;letter-spacing:.12em;text-transform:uppercase;margin-bottom:48px}
+.cov-meta{display:flex;gap:36px;align-items:center}
+.cm-item{text-align:center}
+.cm-label{font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);margin-bottom:4px}
+.cm-val{font-size:13px;color:#F0F0F2}
+.cm-sep{width:1px;height:36px;background:#2A2A2E}
+
+/* ── TOC ─────────────────────────────────────────── */
+.toc-list{display:flex;flex-direction:column}
+.toc-item{display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--n200);text-decoration:none;color:var(--n900);transition:background .2s}
+.toc-item:last-child{border-bottom:none}
+.toc-num{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--crimson);min-width:32px}
+.toc-body{flex:1}
+.toc-ttl{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--black);margin-bottom:3px}
+.toc-d{font-size:12px;color:var(--n500)}
+.toc-arr{color:var(--n400);font-size:20px}
+
+/* ── SWATCHES ────────────────────────────────────── */
+.sw-grid{display:grid;gap:16px;margin-bottom:32px}
+.sw-4{grid-template-columns:repeat(4,1fr)}
+.sw-3{grid-template-columns:repeat(3,1fr)}
+.sw-2{grid-template-columns:repeat(2,1fr)}
+.sw-card{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:#fff}
+.sw-color{height:120px}
+.sw-info{padding:16px}
+.sw-role{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);margin-bottom:3px}
+.sw-name{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--black);margin-bottom:10px}
+.sw-vals{font-size:11px;line-height:1.9;color:var(--n700)}
+.sw-hex{font-family:'Courier New',monospace;font-size:13px;font-weight:700;color:var(--n900);display:block;margin-bottom:2px}
+.sw-pantone{display:inline-block;margin-top:6px;background:var(--n100);border-radius:4px;padding:2px 8px;font-size:10px;font-weight:600;color:var(--n600)}
+.grad-bar{height:64px;border-radius:var(--r);background:var(--grad-h);display:flex;align-items:center;justify-content:space-between;padding:0 28px;box-shadow:var(--sh);margin-bottom:8px}
+.grad-bar span{font-family:'Courier New',monospace;font-size:13px;color:rgba(255,255,255,.9);font-weight:700}
+.grad-bar .gb-mid{font-size:11px;color:rgba(255,255,255,.7)}
+.n-strip{display:flex;gap:4px;margin-bottom:6px}
+.n-step{flex:1;border-radius:8px;overflow:hidden}
+.n-sc{height:44px}
+.n-si{padding:6px 3px}
+.n-sn{font-family:'Orbitron',sans-serif;font-size:8px;font-weight:700;color:var(--n600);display:block;text-align:center}
+.n-sh{font-family:'Courier New',monospace;font-size:7px;color:var(--n500);display:block;text-align:center}
+.dark-panel{background:var(--dark-bg);border-radius:var(--r-lg);padding:32px;margin-bottom:32px;border:1px solid #1E1E22}
+.dp-title{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--n600);margin-bottom:20px}
+.dp-swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.dp-sw{border-radius:10px;padding:14px 12px}
+.dp-label{font-family:'Orbitron',sans-serif;font-size:8px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+.dp-hex{font-family:'Courier New',monospace;font-size:10px;margin-bottom:3px}
+.dp-role{font-size:9px;opacity:.55}
+.a11y-table{width:100%;border-collapse:collapse;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:#fff}
+.a11y-table th{background:var(--black);color:#fff;padding:13px 16px;text-align:left;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.a11y-table td{padding:12px 16px;border-bottom:1px solid var(--n100);font-size:13px;vertical-align:middle}
+.a11y-table tr:last-child td{border-bottom:none}
+.a11y-table tr:hover td{background:var(--n50)}
+.pp{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:6px;font-size:12px;font-weight:700}
+.badge-p{background:#D1FAE5;color:#065F46;font-size:10px;padding:2px 8px;border-radius:4px;font-weight:700;display:inline-block}
+.badge-f{background:#FEE2E2;color:#991B1B;font-size:10px;padding:2px 8px;border-radius:4px;font-weight:700;display:inline-block}
+.badge-w{background:#FEF3C7;color:#92400E;font-size:10px;padding:2px 8px;border-radius:4px;font-weight:700;display:inline-block}
+
+/* ── TYPOGRAPHY ──────────────────────────────────── */
+.type-box{background:#fff;border-radius:var(--r-lg);padding:40px;margin-bottom:20px;box-shadow:var(--sh)}
+.type-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px}
+.type-fname{font-size:26px;font-weight:800;color:var(--black);letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.type-src{font-size:12px;color:var(--n500);margin-bottom:6px}
+.type-import{font-family:'Courier New',monospace;font-size:11px;background:var(--n50);border:1px solid var(--n200);border-radius:6px;padding:8px 12px;color:var(--n700);margin-bottom:24px;display:block;word-break:break-all;line-height:1.6}
+.type-alpha{font-size:17px;color:var(--n700);line-height:1.6;letter-spacing:.04em;border-top:1px solid var(--n200);border-bottom:1px solid var(--n200);padding:16px 0;margin-bottom:24px;word-break:break-all}
+.grad-txt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.scale-rows{display:flex;flex-direction:column}
+.sc-row{display:flex;align-items:baseline;gap:20px;padding:13px 0;border-bottom:1px solid var(--n100)}
+.sc-row:last-child{border-bottom:none}
+.sc-meta{min-width:200px;flex-shrink:0}
+.sc-lbl{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--n500)}
+.sc-sz{font-family:'Courier New',monospace;font-size:10px;color:var(--n600)}
+.sc-text{flex:1;text-transform:uppercase;letter-spacing:.05em;color:var(--black)}
+.wt-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:24px}
+.wt-card{background:var(--n50);border-radius:10px;padding:16px;border:1px solid var(--n200)}
+.wt-num{font-size:9px;color:var(--n500);margin-bottom:1px}
+.wt-name{font-size:10px;color:var(--n700);font-weight:600;margin-bottom:10px}
+.wt-orb{font-family:'Orbitron',sans-serif;font-size:18px;letter-spacing:.04em;color:var(--black);text-transform:uppercase}
+.wt-pop{font-family:'Poppins',sans-serif;font-size:17px;color:var(--black)}
+.pair-demo{background:var(--n50);border-radius:var(--r-lg);padding:40px;border-left:4px solid var(--crimson);margin-bottom:24px}
+.pd-h{font-family:'Orbitron',sans-serif;font-size:28px;font-weight:700;letter-spacing:.05em;color:var(--black);text-transform:uppercase;margin-bottom:8px;line-height:1.2}
+.pd-sub{font-size:15px;font-weight:600;color:var(--crimson);margin-bottom:16px}
+.pd-body{font-size:15px;color:var(--n700);line-height:1.7;max-width:700px}
+
+/* ── LOGO GUIDELINES ─────────────────────────────── */
+.logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.logo-card{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.logo-prev{height:160px;display:flex;align-items:center;justify-content:center;gap:10px;flex-direction:column}
+.logo-lbl{padding:13px 16px;background:var(--n50);border-top:1px solid var(--n200)}
+.logo-lname{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--n800);margin-bottom:3px}
+.logo-lfile{font-family:'Courier New',monospace;font-size:10px;color:var(--n500)}
+.lmw{display:flex;align-items:center;gap:10px}
+.lmi{position:relative;flex-shrink:0}
+.lmsq{position:absolute;border-radius:3px}
+.lmtxt{display:flex;flex-direction:column}
+.lmv{font-family:'Orbitron',sans-serif;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.1em}
+.lma{font-family:'Orbitron',sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.2em}
+.cs-diagram{background:#fff;border-radius:var(--r-lg);padding:48px;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh);margin-bottom:24px}
+.cs-inner{border:2px dashed var(--n300);border-radius:4px;padding:40px;position:relative;display:flex;align-items:center;gap:12px}
+.cs-arrow{position:absolute;font-size:10px;color:var(--crimson);font-weight:700}
+.cs-top{top:-18px;left:50%;transform:translateX(-50%)}
+.cs-left{left:-36px;top:50%;transform:translateY(-50%) rotate(-90deg);white-space:nowrap}
+.cs-right{right:-36px;top:50%;transform:translateY(-50%) rotate(90deg);white-space:nowrap}
+.cs-bot{bottom:-18px;left:50%;transform:translateX(-50%)}
+.rule-box{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-bottom:20px}
+.rule-hdr{padding:13px 20px;font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.rule-hdr.do{background:var(--crimson);color:#fff}
+.rule-hdr.dont{background:var(--black);color:#fff}
+.rule-item{display:flex;gap:10px;padding:11px 20px;border-bottom:1px solid var(--n100);font-size:13px;color:var(--n700);line-height:1.5;align-items:flex-start}
+.rule-item:last-child{border-bottom:none}
+.ri{flex-shrink:0;font-size:14px;margin-top:1px}
+
+/* ── BRAND VOICE ─────────────────────────────────── */
+.pers-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.pers-card{background:var(--dark-bg);border-radius:var(--r-lg);padding:32px;border:1px solid #1E1E22}
+.pers-word{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+.pers-num{font-size:10px;color:var(--n600);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.pers-desc{font-size:13px;color:#9B9BA8;line-height:1.6}
+.specs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
+.spec-card{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh)}
+.spec-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--n500);margin-bottom:6px}
+.spec-val{font-size:14px;font-weight:600;color:var(--black)}
+.spec-val.red{color:var(--crimson)}
+.mc-block{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-bottom:28px}
+.mc-hdr{background:var(--black);padding:13px 20px;font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.mc-row{display:flex;gap:20px;padding:13px 20px;border-bottom:1px solid var(--n100);align-items:flex-start}
+.mc-row:last-child{border-bottom:none}
+.mc-ctx{min-width:150px;font-size:11px;font-weight:700;color:var(--n500);letter-spacing:.02em;text-transform:uppercase;padding-top:3px;flex-shrink:0}
+.mc-copy{font-size:14px;color:var(--n900)}
+.cta-pill{display:inline-block;background:var(--crimson);color:#fff;padding:5px 16px;border-radius:7px;font-size:13px;font-weight:600}
+.cta-sec{display:inline-block;background:var(--n200);color:var(--n800);padding:5px 16px;border-radius:7px;font-size:13px;font-weight:600;margin-left:8px}
+.word-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px}
+.word-col{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.wc-hdr{padding:13px 20px;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.wc-hdr.use{background:var(--crimson);color:#fff}
+.wc-hdr.avoid{background:var(--black);color:#fff}
+.w-item{padding:10px 20px;border-bottom:1px solid var(--n100);font-size:13px}
+.w-item:last-child{border-bottom:none}
+.w-item strong{font-weight:700;color:var(--n900)}
+.w-item .why{color:var(--n500);font-size:11px;display:block;margin-top:2px}
+.tone-table{width:100%;border-collapse:collapse;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:#fff}
+.tone-table th{background:var(--black);color:#fff;padding:13px 16px;text-align:left;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.tone-table td{padding:14px 16px;border-bottom:1px solid var(--n100);font-size:13px;vertical-align:top}
+.tone-table tr:last-child td{border-bottom:none}
+.tone-table td:first-child{font-weight:700;color:var(--crimson);font-size:12px;min-width:140px;text-transform:uppercase;letter-spacing:.04em}
+
+/* ── PATTERN ─────────────────────────────────────── */
+.pat-demos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.pat-card{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.pat-prev{height:180px}
+.pat-lbl{padding:14px 16px;background:#fff;border-top:1px solid var(--n200)}
+.pat-name{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--n800);margin-bottom:3px}
+.pat-spec{font-family:'Courier New',monospace;font-size:10px;color:var(--n500)}
+
+/* ── TOKENS ──────────────────────────────────────── */
+.code-blk{background:#1E1E22;border-radius:var(--r-lg);padding:36px;font-family:'Courier New',monospace;font-size:13px;line-height:1.85;color:#F0F0F2;overflow-x:auto;margin-bottom:24px;box-shadow:var(--sh-lg)}
+.cc{color:#6A737D}.cs2{color:#B392F0}.cp{color:#79B8FF}.cv{color:#F97583}.ch{color:#FDCC52;font-weight:700}
+.folder-tree{background:var(--n50);border:1px solid var(--n200);border-radius:var(--r);padding:28px;font-family:'Courier New',monospace;font-size:13px;line-height:2;color:var(--n700)}
+.ft-dir{color:var(--blue);font-weight:700}
+.ft-file{color:var(--n700)}
+.ft-cm{color:var(--n400)}
+
+/* ── UTILS ───────────────────────────────────────── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media print{body{background:white}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<section id="cover" class="cover">
+  <div class="cov-top"></div>
+  <div class="cov-glow"></div>
+  <div class="cov-content">
+    <div class="cov-icon">
+      <div class="ci ci1"></div>
+      <div class="ci ci2"></div>
+      <div class="ci ci3"></div>
+      <div class="ci ci4"></div>
+    </div>
+    <div class="cov-vertex">VERTEX</div>
+    <div class="cov-auto">AUTOMATIONS</div>
+    <div class="cov-div"></div>
+    <div class="cov-kit">Brand Identity Kit</div>
+    <div class="cov-kitsub">Visual Identity System · Version 1.0</div>
+    <div class="cov-meta">
+      <div class="cm-item"><div class="cm-label">Issued</div><div class="cm-val">April 2026</div></div>
+      <div class="cm-sep"></div>
+      <div class="cm-item"><div class="cm-label">Version</div><div class="cm-val">1.0 Final</div></div>
+      <div class="cm-sep"></div>
+      <div class="cm-item"><div class="cm-label">Scope</div><div class="cm-val">Full Identity</div></div>
+      <div class="cm-sep"></div>
+      <div class="cm-item"><div class="cm-label">Industry</div><div class="cm-val">AI Automation</div></div>
+    </div>
+  </div>
+  <div class="cov-bot"></div>
+</section>
+
+<!-- ═══════════ TOC ═══════════ -->
+<section id="toc" class="sec sec-w">
+  <div class="sec-tag">Index</div>
+  <div class="sec-title">Table of Contents</div>
+  <div class="sec-rule"></div>
+  <div class="sec-desc">This document defines the complete visual and verbal identity of Vertex Automations. Every decision is production-ready and implementation-specific.</div>
+  <div class="toc-list">
+    <a href="#colors" class="toc-item">
+      <div class="toc-num">01</div>
+      <div class="toc-body"><div class="toc-ttl">Color System</div><div class="toc-d">Primary palette · Blue accents · Neutral scale · Dark mode · Accessibility ratios</div></div>
+      <div class="toc-arr">→</div>
+    </a>
+    <a href="#typography" class="toc-item">
+      <div class="toc-num">02</div>
+      <div class="toc-body"><div class="toc-ttl">Typography System</div><div class="toc-d">Orbitron headings · Poppins body · Size scale · Weight specimens · Pairing logic</div></div>
+      <div class="toc-arr">→</div>
+    </a>
+    <a href="#logo" class="toc-item">
+      <div class="toc-num">03</div>
+      <div class="toc-body"><div class="toc-ttl">Logo Guidelines</div><div class="toc-d">Variants · Naming convention · Clear space · Minimum sizes · Forbidden uses</div></div>
+      <div class="toc-arr">→</div>
+    </a>
+    <a href="#voice" class="toc-item">
+      <div class="toc-num">04</div>
+      <div class="toc-body"><div class="toc-ttl">Brand Voice &amp; Tone</div><div class="toc-d">Personality · Writing specs · Microcopy · Word lists · Context tone</div></div>
+      <div class="toc-arr">→</div>
+    </a>
+    <a href="#pattern" class="toc-item">
+      <div class="toc-num">05</div>
+      <div class="toc-body"><div class="toc-ttl">Pattern System</div><div class="toc-d">Motif derivation · Light · Dark · Accent · Usage rules</div></div>
+      <div class="toc-arr">→</div>
+    </a>
+    <a href="#tokens" class="toc-item">
+      <div class="toc-num">06</div>
+      <div class="toc-body"><div class="toc-ttl">Design Tokens &amp; File Manifest</div><div class="toc-d">CSS custom properties · Folder structure · Asset naming convention</div></div>
+      <div class="toc-arr">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ 01 — COLORS ═══════════ -->
+<section id="colors" class="sec">
+  <div class="sec-tag">01 — Color System</div>
+  <div class="sec-title">Brand Color System</div>
+  <div class="sec-rule"></div>
+  <div class="sec-desc">Extracted directly from the logo. Deep crimson anchors every high-stakes brand moment. Rose pink provides the gradient companion. Electric blue serves digital accent contexts. Together they signal precision, urgency, and intelligence.</div>
+
+  <div class="sub-title">Primary Palette</div>
+  <div class="sw-grid sw-4">
+    <div class="sw-card">
+      <div class="sw-color" style="background:#BF1040"></div>
+      <div class="sw-info">
+        <div class="sw-role">Primary · Core Identity</div>
+        <div class="sw-name">Deep Crimson</div>
+        <div class="sw-vals"><span class="sw-hex">#BF1040</span>rgb(191, 16, 64)<br>hsl(344°, 85%, 41%)<br>CMYK 0 · 92 · 67 · 25<span class="sw-pantone">PMS 200 C</span></div>
+      </div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-color" style="background:#F0647A"></div>
+      <div class="sw-info">
+        <div class="sw-role">Primary Light · Gradient Origin</div>
+        <div class="sw-name">Rose Pink</div>
+        <div class="sw-vals"><span class="sw-hex">#F0647A</span>rgb(240, 100, 122)<br>hsl(351°, 83%, 67%)<br>CMYK 0 · 58 · 49 · 6<span class="sw-pantone">PMS 191 C</span></div>
+      </div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-color" style="background:#D83562"></div>
+      <div class="sw-info">
+        <div class="sw-role">Gradient Mid · Reference Only</div>
+        <div class="sw-name">Mid Rose</div>
+        <div class="sw-vals"><span class="sw-hex">#D83562</span>rgb(216, 53, 98)<br>hsl(345°, 66%, 53%)<br>CMYK 0 · 75 · 55 · 15<span class="sw-pantone">PMS 199 C</span></div>
+      </div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-color" style="background:#0D0D0F"></div>
+      <div class="sw-info">
+        <div class="sw-role">Base · Wordmark &amp; Text</div>
+        <div class="sw-name">Brand Black</div>
+        <div class="sw-vals"><span class="sw-hex">#0D0D0F</span>rgb(13, 13, 15)<br>hsl(240°, 7%, 6%)<br>CMYK 0 · 0 · 0 · 95<span class="sw-pantone">PMS Black 6 C</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title">Brand Gradient</div>
+  <div class="grad-bar">
+    <span>#F0647A</span><span class="gb-mid">↔ 135° diagonal · 90° horizontal ↔</span><span>#BF1040</span>
+  </div>
+  <p style="font-size:12px;color:var(--n500);margin-bottom:40px">CSS: <code style="font-family:'Courier New';background:var(--n100);padding:2px 8px;border-radius:4px">linear-gradient(135deg, #F0647A 0%, #D83562 50%, #BF1040 100%)</code></p>
+
+  <div class="sub-title">Secondary Palette — Blue Accents</div>
+  <div class="sw-grid sw-3">
+    <div class="sw-card">
+      <div class="sw-color" style="background:#0A84FF"></div>
+      <div class="sw-info">
+        <div class="sw-role">Accent · Primary Digital</div>
+        <div class="sw-name">Electric Blue</div>
+        <div class="sw-vals"><span class="sw-hex">#0A84FF</span>rgb(10, 132, 255)<br>hsl(210°, 100%, 52%)<br>CMYK 96 · 48 · 0 · 0<span class="sw-pantone">PMS 2925 C</span></div>
+      </div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-color" style="background:#0A66C2"></div>
+      <div class="sw-info">
+        <div class="sw-role">Accent Deep · Supporting</div>
+        <div class="sw-name">Corporate Blue</div>
+        <div class="sw-vals"><span class="sw-hex">#0A66C2</span>rgb(10, 102, 194)<br>hsl(210°, 90%, 40%)<br>CMYK 95 · 47 · 0 · 24<span class="sw-pantone">PMS 2945 C</span></div>
+      </div>
+    </div>
+    <div class="sw-card">
+      <div class="sw-color" style="background:#0758C7"></div>
+      <div class="sw-info">
+        <div class="sw-role">Hover State · Interaction</div>
+        <div class="sw-name">Blue Hover</div>
+        <div class="sw-vals"><span class="sw-hex">#0758C7</span>rgb(7, 88, 199)<br>hsl(217°, 93%, 40%)<br>CMYK 96 · 56 · 0 · 22<span class="sw-pantone">PMS 300 C</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title">Neutral Scale</div>
+  <div class="n-strip">
+    <div class="n-step"><div class="n-sc" style="background:#F8F9FA;border:1px solid #E9ECEF;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">50</span><span class="n-sh">#F8F9FA</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#F1F3F5;border:1px solid #E9ECEF;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">100</span><span class="n-sh">#F1F3F5</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#E9ECEF;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">200</span><span class="n-sh">#E9ECEF</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#DEE2E6;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">300</span><span class="n-sh">#DEE2E6</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#CED4DA;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">400</span><span class="n-sh">#CED4DA</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#ADB5BD;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">500</span><span class="n-sh">#ADB5BD</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#868E96;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">600</span><span class="n-sh">#868E96</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#495057;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">700</span><span class="n-sh">#495057</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#343A40;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">800</span><span class="n-sh">#343A40</span></div></div>
+    <div class="n-step"><div class="n-sc" style="background:#212529;border-radius:8px 8px 0 0"></div><div class="n-si"><span class="n-sn">900</span><span class="n-sh">#212529</span></div></div>
+  </div>
+  <p style="font-size:12px;color:var(--n500);margin-bottom:40px">Slightly cool-biased grays. Lets the warm crimson breathe as the uncontested hero. Same principle as Linear.app and Notion.</p>
+
+  <div class="sub-title">Dark Mode Palette</div>
+  <div class="dark-panel">
+    <div class="dp-title">Dark Mode Tokens — apply via [data-theme="dark"]</div>
+    <div class="dp-swatches">
+      <div class="dp-sw" style="background:#141416"><div class="dp-label" style="color:#9B9BA8">Background</div><div class="dp-hex" style="color:#F0F0F2">#0A0A0B</div><div class="dp-role" style="color:#9B9BA8">Base layer</div></div>
+      <div class="dp-sw" style="background:#1E1E22"><div class="dp-label" style="color:#9B9BA8">Surface</div><div class="dp-hex" style="color:#F0F0F2">#141416</div><div class="dp-role" style="color:#9B9BA8">Cards</div></div>
+      <div class="dp-sw" style="background:#2A2A2E"><div class="dp-label" style="color:#9B9BA8">Elevated</div><div class="dp-hex" style="color:#F0F0F2">#1E1E22</div><div class="dp-role" style="color:#9B9BA8">Modals</div></div>
+      <div class="dp-sw" style="background:#E8435C"><div class="dp-label" style="color:#fff">Primary</div><div class="dp-hex" style="color:#fff">#E8435C</div><div class="dp-role" style="color:rgba(255,255,255,.7)">Crimson ↑</div></div>
+      <div class="dp-sw" style="background:#3B9EFF"><div class="dp-label" style="color:#fff">Accent</div><div class="dp-hex" style="color:#fff">#3B9EFF</div><div class="dp-role" style="color:rgba(255,255,255,.7)">Blue ↑</div></div>
+    </div>
+  </div>
+
+  <div class="sub-title">WCAG Accessibility Contrast Ratios</div>
+  <table class="a11y-table">
+    <thead><tr><th>Colour Pairing</th><th>Preview</th><th>Ratio</th><th>Normal Text</th><th>Large Text</th></tr></thead>
+    <tbody>
+      <tr><td>Deep Crimson on White</td><td><div class="pp" style="background:#BF1040;color:#fff">Aa</div></td><td><strong>6.25 : 1</strong></td><td><span class="badge-p">AA ✓</span></td><td><span class="badge-p">AAA ✓</span></td></tr>
+      <tr><td>White on Deep Crimson</td><td><div class="pp" style="background:#BF1040;color:#fff">Aa</div></td><td><strong>6.25 : 1</strong></td><td><span class="badge-p">AA ✓</span></td><td><span class="badge-p">AAA ✓</span></td></tr>
+      <tr><td>Rose Pink on White</td><td><div class="pp" style="background:#fff;color:#F0647A;border:1px solid #eee">Aa</div></td><td><strong>3.09 : 1</strong></td><td><span class="badge-f">Fails</span></td><td><span class="badge-p">AA ✓</span></td></tr>
+      <tr><td>Electric Blue on White</td><td><div class="pp" style="background:#fff;color:#0A84FF;border:1px solid #eee">Aa</div></td><td><strong>3.66 : 1</strong></td><td><span class="badge-f">Fails</span></td><td><span class="badge-p">AA ✓</span></td></tr>
+      <tr><td>Corporate Blue on White</td><td><div class="pp" style="background:#fff;color:#0A66C2;border:1px solid #eee">Aa</div></td><td><strong>5.68 : 1</strong></td><td><span class="badge-p">AA ✓</span></td><td><span class="badge-w">AAA ✗</span></td></tr>
+      <tr><td>Brand Black on White</td><td><div class="pp" style="background:#fff;color:#0D0D0F;border:1px solid #eee">Aa</div></td><td><strong>19.2 : 1</strong></td><td><span class="badge-p">AAA ✓</span></td><td><span class="badge-p">AAA ✓</span></td></tr>
+      <tr><td>Dark Mode Primary on #0A0A0B</td><td><div class="pp" style="background:#0A0A0B;color:#E8435C">Aa</div></td><td><strong>5.80 : 1</strong></td><td><span class="badge-p">AA ✓</span></td><td><span class="badge-p">AAA ✓</span></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--n500);margin-top:10px">WCAG AA = 4.5:1 normal · 3:1 large. WCAG AAA = 7:1. Rose Pink and Electric Blue must not be used for body text.</p>
+</section>
+
+<!-- ═══════════ 02 — TYPOGRAPHY ═══════════ -->
+<section id="typography" class="sec sec-w">
+  <div class="sec-tag">02 — Typography System</div>
+  <div class="sec-title">Typography System</div>
+  <div class="sec-rule"></div>
+  <div class="sec-desc">Orbitron commands every heading — geometric, futuristic, no italics. Poppins handles all body copy — warm, legible, human. Together they express the brand promise: precision-engineered systems, human-readable results.</div>
+
+  <div class="sub-title">Heading Typeface — Orbitron</div>
+  <div class="type-box">
+    <div class="type-label">Heading Font · Google Fonts · Free · No Italic Variant</div>
+    <div class="type-fname" style="font-family:'Orbitron',sans-serif">Orbitron</div>
+    <div class="type-src">Weights: 400 · 500 · 600 · 700 · 800 · 900 — CSS Var: --font-heading: 'Orbitron', 'Segoe UI', Arial, sans-serif</div>
+    <code class="type-import">@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');</code>
+    <div class="type-alpha" style="font-family:'Orbitron',sans-serif">
+      <span class="grad-txt" style="font-size:30px;font-weight:800">ABCDEFGHIJKLMNOP</span><br>
+      QRSTUVWXYZ 0123456789
+    </div>
+    <div class="sub-title" style="margin-top:24px">Heading Scale</div>
+    <div class="scale-rows">
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">H1 Display</div><div class="sc-sz">72px / 4.5rem · W800 · LS 0.06em</div></div><div class="sc-text" style="font-family:'Orbitron',sans-serif;font-size:38px;font-weight:800">Automate</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">H2 Title</div><div class="sc-sz">52px / 3.25rem · W700 · LS 0.05em</div></div><div class="sc-text" style="font-family:'Orbitron',sans-serif;font-size:30px;font-weight:700">Build Systems</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">H3 Section</div><div class="sc-sz">38px / 2.375rem · W600 · LS 0.04em</div></div><div class="sc-text" style="font-family:'Orbitron',sans-serif;font-size:24px;font-weight:600">Zero Manual Work</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">H4 Subsection</div><div class="sc-sz">28px / 1.75rem · W600 · LS 0.04em</div></div><div class="sc-text" style="font-family:'Orbitron',sans-serif;font-size:20px;font-weight:600">Deploy Instantly</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">H5 Label</div><div class="sc-sz">22px / 1.375rem · W500 · LS 0.05em</div></div><div class="sc-text" style="font-family:'Orbitron',sans-serif;font-size:17px;font-weight:500">Scale Your Output</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">H6 UI Label</div><div class="sc-sz">18px / 1.125rem · W500 · LS 0.05em</div></div><div class="sc-text" style="font-family:'Orbitron',sans-serif;font-size:14px;font-weight:500">Engineered Precision</div></div>
+    </div>
+    <div class="sub-title" style="margin-top:24px">Weight Specimens</div>
+    <div class="wt-grid">
+      <div class="wt-card"><div class="wt-num">400</div><div class="wt-name">Regular</div><div class="wt-orb" style="font-weight:400">Vtx</div></div>
+      <div class="wt-card"><div class="wt-num">500</div><div class="wt-name">Medium</div><div class="wt-orb" style="font-weight:500">Vtx</div></div>
+      <div class="wt-card"><div class="wt-num">600</div><div class="wt-name">SemiBold</div><div class="wt-orb" style="font-weight:600">Vtx</div></div>
+      <div class="wt-card"><div class="wt-num">700</div><div class="wt-name">Bold</div><div class="wt-orb" style="font-weight:700">Vtx</div></div>
+      <div class="wt-card"><div class="wt-num">800–900</div><div class="wt-name">Extra / Black</div><div class="wt-orb" style="font-weight:900">Vtx</div></div>
+    </div>
+  </div>
+
+  <div class="sub-title">Body Typeface — Poppins</div>
+  <div class="type-box">
+    <div class="type-label">Body Font · Google Fonts · Free</div>
+    <div class="type-fname" style="font-family:'Poppins',sans-serif;font-weight:700">Poppins</div>
+    <div class="type-src">Weights: 300 · 400 · 500 · 600 · 700 — CSS Var: --font-body: 'Poppins', 'Segoe UI', Helvetica, Arial, sans-serif</div>
+    <code class="type-import">@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');</code>
+    <div class="type-alpha" style="font-family:'Poppins',sans-serif">
+      AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz<br>
+      0 1 2 3 4 5 6 7 8 9 &amp; @ # ! ? . , : ;
+    </div>
+    <div class="sub-title" style="margin-top:24px">Body Scale</div>
+    <div class="scale-rows">
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">Body XL</div><div class="sc-sz">20px / 1.25rem · LH 1.75</div></div><div class="sc-text" style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:400;text-transform:none;letter-spacing:0">We eliminate the manual work slowing your business down.</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">Body Default</div><div class="sc-sz">16px / 1rem · LH 1.65</div></div><div class="sc-text" style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:400;text-transform:none;letter-spacing:0">Vertex builds AI-powered automation systems that cut manual tasks to zero — so your team focuses on what actually moves the business.</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">Body Small</div><div class="sc-sz">14px / 0.875rem · LH 1.6</div></div><div class="sc-text" style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:400;text-transform:none;letter-spacing:0">Results delivered within 30 days. No long onboarding. No fluff.</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">Caption</div><div class="sc-sz">12px / 0.75rem · W500 · LS 0.02em</div></div><div class="sc-text" style="font-family:'Poppins',sans-serif;font-size:12px;font-weight:500;text-transform:none;letter-spacing:.02em;color:var(--n600)">Updated April 2026 · Version 1.0 · Confidential</div></div>
+      <div class="sc-row"><div class="sc-meta"><div class="sc-lbl">UI Label</div><div class="sc-sz">13px / 0.8125rem · W600 · LS 0.04em</div></div><div class="sc-text" style="font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--n700)">Automation Type</div></div>
+    </div>
+    <div class="sub-title" style="margin-top:24px">Weight Specimens</div>
+    <div class="wt-grid">
+      <div class="wt-card"><div class="wt-num">300</div><div class="wt-name">Light</div><div class="wt-pop" style="font-weight:300">Precision</div></div>
+      <div class="wt-card"><div class="wt-num">400</div><div class="wt-name">Regular</div><div class="wt-pop" style="font-weight:400">Precision</div></div>
+      <div class="wt-card"><div class="wt-num">500</div><div class="wt-name">Medium</div><div class="wt-pop" style="font-weight:500">Precision</div></div>
+      <div class="wt-card"><div class="wt-num">600</div><div class="wt-name">SemiBold</div><div class="wt-pop" style="font-weight:600">Precision</div></div>
+      <div class="wt-card"><div class="wt-num">700</div><div class="wt-name">Bold</div><div class="wt-pop" style="font-weight:700">Precision</div></div>
+    </div>
+  </div>
+
+  <div class="sub-title">Pairing Demonstration</div>
+  <div class="pair-demo">
+    <div class="pd-h">Eliminate Manual Work.<br>Build Systems That Scale.</div>
+    <div class="pd-sub">AI-Powered Business Automation</div>
+    <div class="pd-body">Vertex Automations designs and deploys intelligent automation systems tailored to your exact workflows. We cut manual task volume by an average of 87% in the first 30 days — without disrupting your operations. Precise. Relentless. Intelligent.</div>
+  </div>
+</section>
+
+<!-- ═══════════ 03 — LOGO ═══════════ -->
+<section id="logo" class="sec">
+  <div class="sec-tag">03 — Logo Guidelines</div>
+  <div class="sec-title">Logo Usage Guidelines</div>
+  <div class="sec-rule"></div>
+  <div class="sec-desc">Six approved variants, each serving a specific context. Reproduce exactly. Every modification listed below destroys the brand's precision signal.</div>
+
+  <div class="sub-title">Logo Variants</div>
+  <div class="logo-grid">
+    <div class="logo-card">
+      <div class="logo-prev" style="background:#fff">
+        <div class="lmw">
+          <div class="lmi" style="width:52px;height:34px;position:relative">
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:0;background:#F0647A;border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:22px;background:linear-gradient(135deg,#F0647A,#D83562);border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:16px;left:11px;background:linear-gradient(135deg,#D83562,#BF1040);border-radius:4px"></div>
+          </div>
+          <div class="lmtxt"><div class="lmv" style="font-size:16px;color:#0D0D0F">VERTEX</div><div class="lma" style="font-size:7px;color:#0D0D0F">AUTOMATIONS</div></div>
+        </div>
+      </div>
+      <div class="logo-lbl"><div class="logo-lname">Primary · Full Colour Horizontal</div><div class="logo-lfile">logo-primary-color-horizontal.svg</div></div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-prev" style="background:#fff;flex-direction:column;gap:6px">
+        <div class="lmi" style="width:52px;height:34px;position:relative">
+          <div class="lmsq" style="width:18px;height:18px;top:0;left:0;background:#F0647A;border-radius:4px"></div>
+          <div class="lmsq" style="width:18px;height:18px;top:0;left:22px;background:linear-gradient(135deg,#F0647A,#D83562);border-radius:4px"></div>
+          <div class="lmsq" style="width:18px;height:18px;top:16px;left:11px;background:linear-gradient(135deg,#D83562,#BF1040);border-radius:4px"></div>
+        </div>
+        <div style="text-align:center"><div class="lmv" style="font-size:14px;color:#0D0D0F">VERTEX</div><div class="lma" style="font-size:6px;color:#0D0D0F">AUTOMATIONS</div></div>
+      </div>
+      <div class="logo-lbl"><div class="logo-lname">Stacked · Full Colour Vertical</div><div class="logo-lfile">logo-primary-color-stacked.svg</div></div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-prev" style="background:#fff">
+        <div class="lmi" style="width:68px;height:46px;position:relative">
+          <div class="lmsq" style="width:24px;height:24px;top:0;left:0;background:#F0647A;border-radius:5px"></div>
+          <div class="lmsq" style="width:24px;height:24px;top:0;left:30px;background:linear-gradient(135deg,#F0647A,#D83562);border-radius:5px"></div>
+          <div class="lmsq" style="width:24px;height:24px;top:22px;left:15px;background:linear-gradient(135deg,#D83562,#BF1040);border-radius:5px"></div>
+        </div>
+      </div>
+      <div class="logo-lbl"><div class="logo-lname">Icon Only · Symbol Mark</div><div class="logo-lfile">logo-icon-color.svg</div></div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-prev" style="background:#0A0A0B">
+        <div class="lmw">
+          <div class="lmi" style="width:52px;height:34px;position:relative">
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:0;background:#fff;border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:22px;background:#fff;border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:16px;left:11px;background:#fff;border-radius:4px"></div>
+          </div>
+          <div class="lmtxt"><div class="lmv" style="font-size:16px;color:#fff">VERTEX</div><div class="lma" style="font-size:7px;color:#fff">AUTOMATIONS</div></div>
+        </div>
+      </div>
+      <div class="logo-lbl"><div class="logo-lname">Reversed White · Dark Backgrounds</div><div class="logo-lfile">logo-reversed-white-horizontal.svg</div></div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-prev" style="background:#fff">
+        <div class="lmw">
+          <div class="lmi" style="width:52px;height:34px;position:relative">
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:0;background:#0D0D0F;border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:22px;background:#0D0D0F;border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:16px;left:11px;background:#0D0D0F;border-radius:4px"></div>
+          </div>
+          <div class="lmtxt"><div class="lmv" style="font-size:16px;color:#0D0D0F">VERTEX</div><div class="lma" style="font-size:7px;color:#0D0D0F">AUTOMATIONS</div></div>
+        </div>
+      </div>
+      <div class="logo-lbl"><div class="logo-lname">Single Black · 1-Colour Print</div><div class="logo-lfile">logo-single-black-horizontal.svg</div></div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-prev" style="background:#fff">
+        <div class="lmw">
+          <div class="lmi" style="width:52px;height:34px;position:relative">
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:0;background:#9B9BA8;border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:0;left:22px;background:#6C757D;border-radius:4px"></div>
+            <div class="lmsq" style="width:18px;height:18px;top:16px;left:11px;background:#495057;border-radius:4px"></div>
+          </div>
+          <div class="lmtxt"><div class="lmv" style="font-size:16px;color:#343A40">VERTEX</div><div class="lma" style="font-size:7px;color:#495057">AUTOMATIONS</div></div>
+        </div>
+      </div>
+      <div class="logo-lbl"><div class="logo-lname">Grayscale · B&amp;W Print</div><div class="logo-lfile">logo-grayscale-horizontal.svg</div></div>
+    </div>
+  </div>
+
+  <div class="sub-title">Clear Space Rule</div>
+  <div class="cs-diagram">
+    <div class="cs-inner">
+      <div class="cs-arrow cs-top">↕ 1X minimum</div>
+      <div class="cs-arrow cs-left">↕ 1X minimum</div>
+      <div class="cs-arrow cs-right">↕ 1X minimum</div>
+      <div class="cs-arrow cs-bot">↕ 1X minimum</div>
+      <div style="display:flex;align-items:center;gap:10px;padding:20px">
+        <div style="position:relative;width:52px;height:34px">
+          <div style="position:absolute;width:18px;height:18px;top:0;left:0;background:#F0647A;border-radius:4px"></div>
+          <div style="position:absolute;width:18px;height:18px;top:0;left:22px;background:linear-gradient(135deg,#F0647A,#D83562);border-radius:4px"></div>
+          <div style="position:absolute;width:18px;height:18px;top:16px;left:11px;background:linear-gradient(135deg,#D83562,#BF1040);border-radius:4px"></div>
+        </div>
+        <div><div style="font-family:'Orbitron',sans-serif;font-size:16px;font-weight:800;color:#0D0D0F;letter-spacing:.1em">VERTEX</div><div style="font-family:'Orbitron',sans-serif;font-size:7px;font-weight:500;color:#0D0D0F;letter-spacing:.2em">AUTOMATIONS</div></div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--n500);margin-bottom:32px;line-height:1.6"><strong style="color:var(--black)">1X = height of the full icon mark.</strong> Maintained from all page edges, graphic elements, and adjacent logos in co-branding layouts.</p>
+
+  <div class="two-col">
+    <div>
+      <div class="rule-box">
+        <div class="rule-hdr do">Digital Minimums</div>
+        <div class="rule-item"><span class="ri">🖥</span>Horizontal logo: <strong>140px</strong> minimum width</div>
+        <div class="rule-item"><span class="ri">📱</span>Stacked logo: <strong>100px</strong> minimum width</div>
+        <div class="rule-item"><span class="ri">🔲</span>Icon only: <strong>32px</strong> minimum width</div>
+        <div class="rule-item"><span class="ri">🌐</span>Favicon: <strong>16px and 32px</strong> — supply both</div>
+        <div class="rule-item"><span class="ri">📲</span>App icon: <strong>512px</strong> (1024px for App Store)</div>
+        <div class="rule-item"><span class="ri">🖼</span>Social avatar: <strong>400×400px</strong></div>
+      </div>
+      <div class="rule-box" style="margin-top:20px">
+        <div class="rule-hdr do">Print Minimums</div>
+        <div class="rule-item"><span class="ri">📄</span>Horizontal logo: <strong>35mm</strong> minimum</div>
+        <div class="rule-item"><span class="ri">📄</span>Stacked logo: <strong>25mm</strong> minimum</div>
+        <div class="rule-item"><span class="ri">📄</span>Icon only: <strong>10mm</strong> minimum</div>
+        <div class="rule-item"><span class="ri">🖨</span>All print files: <strong>300 DPI minimum</strong></div>
+      </div>
+    </div>
+    <div>
+      <div class="rule-box">
+        <div class="rule-hdr dont">Never Do This</div>
+        <div class="rule-item"><span class="ri">🚫</span>Stretch or distort proportions in any axis</div>
+        <div class="rule-item"><span class="ri">🚫</span>Recolour gradient outside #F0647A → #BF1040</div>
+        <div class="rule-item"><span class="ri">🚫</span>Add drop shadows, glows, bevels, or emboss</div>
+        <div class="rule-item"><span class="ri">🚫</span>Outline or stroke any logo element</div>
+        <div class="rule-item"><span class="ri">🚫</span>Place logo inside a container shape (box/circle)</div>
+        <div class="rule-item"><span class="ri">🚫</span>Rearrange the icon and wordmark relationship</div>
+        <div class="rule-item"><span class="ri">🚫</span>Change the Orbitron typeface or letter-spacing</div>
+        <div class="rule-item"><span class="ri">🚫</span>Use on busy backgrounds without a solid panel</div>
+        <div class="rule-item"><span class="ri">🚫</span>Use raster files below 300 DPI for print</div>
+        <div class="rule-item"><span class="ri">🚫</span>Animate without brand-approved motion spec</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 04 — VOICE ═══════════ -->
+<section id="voice" class="sec sec-w">
+  <div class="sec-tag">04 — Brand Voice &amp; Tone</div>
+  <div class="sec-title">Brand Voice &amp; Tone</div>
+  <div class="sec-rule"></div>
+  <div class="sec-desc">Every word Vertex publishes passes through three filters. If the copy doesn't feel Precise, Relentless, and Intelligent simultaneously — rewrite it.</div>
+
+  <div class="sub-title">Brand Personality</div>
+  <div class="pers-row">
+    <div class="pers-card">
+      <div class="pers-num">Word 01</div>
+      <div class="pers-word">Precise</div>
+      <div class="pers-desc">Every decision is specific, tested, and defensible. We don't approximate. We build to exact specifications and deliver exactly what we said we would. No rounding up. No vague outcomes.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-num">Word 02</div>
+      <div class="pers-word">Relentless</div>
+      <div class="pers-desc">We don't stop at good enough. We pursue maximum efficiency without apology — bold, uncompromising, results-first energy in everything we publish and everything we build.</div>
+    </div>
+    <div class="pers-card">
+      <div class="pers-num">Word 03</div>
+      <div class="pers-word">Intelligent</div>
+      <div class="pers-desc">AI-native thinking in every system we build. We anticipate problems before they surface. Our work is always one step ahead — analytical, strategic, built on evidence not intuition.</div>
+    </div>
+  </div>
+
+  <div class="sub-title">Writing Style Specifications</div>
+  <div class="specs-grid">
+    <div class="spec-card"><div class="spec-lbl">Formality Scale</div><div class="spec-val red">7 / 10</div></div>
+    <div class="spec-card"><div class="spec-lbl">Voice</div><div class="spec-val">Active — always</div></div>
+    <div class="spec-card"><div class="spec-lbl">Headline length</div><div class="spec-val">4 – 8 words</div></div>
+    <div class="spec-card"><div class="spec-lbl">Body sentence avg</div><div class="spec-val">12 – 20 words</div></div>
+    <div class="spec-card"><div class="spec-lbl">Paragraph max (web)</div><div class="spec-val">3 sentences</div></div>
+    <div class="spec-card"><div class="spec-lbl">Contractions</div><div class="spec-val">Often — you're, we've</div></div>
+    <div class="spec-card"><div class="spec-lbl">Numbers</div><div class="spec-val red">Always digits — 3× not "three"</div></div>
+    <div class="spec-card"><div class="spec-lbl">Humour</div><div class="spec-val">Dry wit only, sparingly</div></div>
+    <div class="spec-card"><div class="spec-lbl">Italics</div><div class="spec-val red">Never — zero exceptions</div></div>
+  </div>
+
+  <div class="sub-title">Microcopy Examples</div>
+  <div class="mc-block">
+    <div class="mc-hdr">Sample Copy — Voice in Action</div>
+    <div class="mc-row"><div class="mc-ctx">Primary CTA</div><div class="mc-copy"><span class="cta-pill">Automate It</span><span class="cta-sec">See It In Action</span></div></div>
+    <div class="mc-row"><div class="mc-ctx">Welcome</div><div class="mc-copy">Welcome to Vertex. Let's cut the work that's slowing you down — starting today.</div></div>
+    <div class="mc-row"><div class="mc-ctx">Form Error</div><div class="mc-copy">Something's off. Check the highlighted field and try again.</div></div>
+    <div class="mc-row"><div class="mc-ctx">Form Success</div><div class="mc-copy">Done. You're in. We'll be in touch within 24 hours.</div></div>
+    <div class="mc-row"><div class="mc-ctx">Empty State</div><div class="mc-copy">No automations running yet. Let's build your first one.</div></div>
+    <div class="mc-row"><div class="mc-ctx">Loading</div><div class="mc-copy">Setting things in motion...</div></div>
+    <div class="mc-row"><div class="mc-ctx">404 Error</div><div class="mc-copy">This page doesn't exist. Your manual work problem does. Let's fix that instead.</div></div>
+    <div class="mc-row"><div class="mc-ctx">Tooltip</div><div class="mc-copy">This runs automatically — you won't need to touch it again.</div></div>
+  </div>
+
+  <div class="sub-title">Word Lists</div>
+  <div class="word-cols">
+    <div class="word-col">
+      <div class="wc-hdr use">✓ Words to Use</div>
+      <div class="w-item"><strong>Automate</strong><span class="why">Core offer — active, owned by the brand</span></div>
+      <div class="w-item"><strong>Eliminate</strong><span class="why">High-conviction — Hormozi-grade directness</span></div>
+      <div class="w-item"><strong>Precision</strong><span class="why">Signals expertise and intentionality</span></div>
+      <div class="w-item"><strong>Deploy</strong><span class="why">Technical authority — operators understand it</span></div>
+      <div class="w-item"><strong>Scale</strong><span class="why">The desired outcome for every client</span></div>
+      <div class="w-item"><strong>System</strong><span class="why">Positions the offer as engineered, not improvised</span></div>
+      <div class="w-item"><strong>Execute</strong><span class="why">Action-oriented, results-focused</span></div>
+      <div class="w-item"><strong>Cut</strong><span class="why">Visceral — cuts waste, cuts time, cuts cost</span></div>
+      <div class="w-item"><strong>Zero</strong><span class="why">Absolute — "zero manual steps," "zero errors"</span></div>
+      <div class="w-item"><strong>Engineered</strong><span class="why">Elevates automation to precision craft</span></div>
+    </div>
+    <div class="word-col">
+      <div class="wc-hdr avoid">✗ Words to Avoid</div>
+      <div class="w-item"><strong>Simply / Just</strong><span class="why">Diminishes the client's actual problem</span></div>
+      <div class="w-item"><strong>Revolutionary</strong><span class="why">Overused, unearned, instant eye-roll</span></div>
+      <div class="w-item"><strong>Leverage</strong><span class="why">Corporate jargon without meaning</span></div>
+      <div class="w-item"><strong>Synergy</strong><span class="why">Non-negotiable — never, ever</span></div>
+      <div class="w-item"><strong>Empower</strong><span class="why">Too soft — we deliver, we don't cheer</span></div>
+      <div class="w-item"><strong>Solutions</strong><span class="why">Every company claims this — meaningless</span></div>
+      <div class="w-item"><strong>Transform</strong><span class="why">Overused in SaaS — too abstract to prove</span></div>
+      <div class="w-item"><strong>Easy</strong><span class="why">Patronising — clients want results, not ease</span></div>
+      <div class="w-item"><strong>Innovative</strong><span class="why">Self-proclaimed, immediately doubted</span></div>
+      <div class="w-item"><strong>Seamless</strong><span class="why">Every tech product claims this — worthless</span></div>
+    </div>
+  </div>
+
+  <div class="sub-title">Tone by Context</div>
+  <table class="tone-table">
+    <thead><tr><th>Context</th><th>Tone Direction</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Social Media</td><td>Punchy, stat-led, Hormozi energy. Short. Provocative.</td><td>"Your team does 14 hours of work a machine does in 4 minutes."</td></tr>
+      <tr><td>Website</td><td>Core voice. Precise, confident, results-first. Every sentence earns its place.</td><td>"We don't consult. We build and deploy."</td></tr>
+      <tr><td>Email</td><td>Warm but efficient. Point in line 1. Zero fluff intro.</td><td>"Here's the automation we think you're missing — and why it matters."</td></tr>
+      <tr><td>Error Messages</td><td>Calm, specific, action-oriented. Never robotic.</td><td>"Something stopped us. Check your connection and try again."</td></tr>
+      <tr><td>Legal / T&amp;C</td><td>Plain language. If a 16-year-old can't read it, rewrite it.</td><td>No legalese. Clear terms. Direct language.</td></tr>
+      <tr><td>Press / PR</td><td>Third-person, factual, metric-rich. Let numbers speak.</td><td>"Vertex reduced client task volume by 87% in 30 days."</td></tr>
+      <tr><td>Sales / Decks</td><td>Direct, proof-first. Show, don't pitch.</td><td>"Here's what we built. Here's what it did. Here's yours."</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════ 05 — PATTERN ═══════════ -->
+<section id="pattern" class="sec">
+  <div class="sec-tag">05 — Pattern System</div>
+  <div class="sec-title">Pattern &amp; Texture Direction</div>
+  <div class="sec-rule"></div>
+  <div class="sec-desc">The brand pattern extends the logo's rounded-square visual DNA into background surfaces. Used at low opacity it creates brand-coded texture without introducing a competing visual language. Barely there. Unmistakably Vertex.</div>
+
+  <div class="sub-title">Motif &amp; Variants</div>
+  <div class="pat-demos">
+    <div class="pat-card">
+      <div class="pat-prev" style="background:#F8F9FA;background-image:radial-gradient(circle,rgba(191,16,64,.12) 2px,transparent 2px),radial-gradient(circle,rgba(191,16,64,.06) 1px,transparent 1px);background-size:28px 28px,14px 14px;background-position:0 0,7px 7px"></div>
+      <div class="pat-lbl"><div class="pat-name">Light Version</div><div class="pat-spec">#BF1040 · 8–12% opacity · on #F8F9FA</div></div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-prev" style="background:#0A0A0B;background-image:radial-gradient(circle,rgba(240,100,122,.12) 2px,transparent 2px),radial-gradient(circle,rgba(240,100,122,.06) 1px,transparent 1px);background-size:28px 28px,14px 14px;background-position:0 0,7px 7px"></div>
+      <div class="pat-lbl"><div class="pat-name">Dark Version</div><div class="pat-spec">#F0647A · 8% opacity · on #0A0A0B</div></div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-prev" style="background:#F8F9FA;background-image:radial-gradient(circle,rgba(10,132,255,.12) 2px,transparent 2px),radial-gradient(circle,rgba(10,132,255,.06) 1px,transparent 1px);background-size:28px 28px,14px 14px;background-position:0 0,7px 7px"></div>
+      <div class="pat-lbl"><div class="pat-name">Accent Blue Version</div><div class="pat-spec">#0A84FF · 6% opacity · tech/data contexts</div></div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="rule-box">
+        <div class="rule-hdr do">✓ Approved Uses</div>
+        <div class="rule-item"><span class="ri">✅</span>Social media story / reel backgrounds</div>
+        <div class="rule-item"><span class="ri">✅</span>Presentation slide backgrounds at 8–10% opacity</div>
+        <div class="rule-item"><span class="ri">✅</span>Email newsletter footer bands</div>
+        <div class="rule-item"><span class="ri">✅</span>Business card reverse side at 15% opacity</div>
+        <div class="rule-item"><span class="ri">✅</span>Packaging interior / tissue paper</div>
+        <div class="rule-item"><span class="ri">✅</span>Apparel all-over print at 30–40% opacity</div>
+      </div>
+    </div>
+    <div>
+      <div class="rule-box">
+        <div class="rule-hdr dont">✗ Not Approved</div>
+        <div class="rule-item"><span class="ri">🚫</span>Behind any logo placement — visual conflict</div>
+        <div class="rule-item"><span class="ri">🚫</span>Full opacity in any context whatsoever</div>
+        <div class="rule-item"><span class="ri">🚫</span>Any layout where it competes with messaging</div>
+        <div class="rule-item"><span class="ri">🚫</span>Hero sections where headline legibility suffers</div>
+        <div class="rule-item"><span class="ri">🚫</span>Minimum 60% background must always be visible</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 06 — TOKENS ═══════════ -->
+<section id="tokens" class="sec sec-w">
+  <div class="sec-tag">06 — Design Tokens &amp; File Manifest</div>
+  <div class="sec-title">Design Tokens</div>
+  <div class="sec-rule"></div>
+  <div class="sec-desc">Paste the CSS block below into your project's :root. The entire brand system — colors, type, spacing, radius, shadows — is live instantly. Works in any CSS framework.</div>
+
+  <div class="sub-title">Complete CSS Custom Properties</div>
+  <div class="code-blk"><span class="cc">/* ============================================================
+   VERTEX AUTOMATIONS — Design Token System v1.0
+   ============================================================ */</span>
+
+<span class="cs2">:root</span> {
+
+  <span class="cc">/* ── COLOR: PRIMARY ──────────────────────────────────────── */</span>
+  <span class="cp">--color-primary</span>:          <span class="ch">#BF1040</span>;
+  <span class="cp">--color-primary-light</span>:    <span class="ch">#F0647A</span>;
+  <span class="cp">--color-primary-mid</span>:      <span class="ch">#D83562</span>;
+  <span class="cp">--color-primary-dark</span>:     <span class="ch">#8C0B2E</span>;
+  <span class="cp">--color-primary-hover</span>:    <span class="ch">#A80E37</span>;
+
+  <span class="cc">/* ── COLOR: ACCENT ───────────────────────────────────────── */</span>
+  <span class="cp">--color-accent</span>:           <span class="ch">#0A84FF</span>;
+  <span class="cp">--color-accent-deep</span>:      <span class="ch">#0A66C2</span>;
+  <span class="cp">--color-accent-hover</span>:     <span class="ch">#0758C7</span>;
+  <span class="cp">--color-accent-light</span>:     <span class="ch">#D6EAFF</span>;
+
+  <span class="cc">/* ── COLOR: NEUTRAL ──────────────────────────────────────── */</span>
+  <span class="cp">--color-neutral-50</span>:       <span class="ch">#F8F9FA</span>;
+  <span class="cp">--color-neutral-100</span>:      <span class="ch">#F1F3F5</span>;
+  <span class="cp">--color-neutral-200</span>:      <span class="ch">#E9ECEF</span>;
+  <span class="cp">--color-neutral-300</span>:      <span class="ch">#DEE2E6</span>;
+  <span class="cp">--color-neutral-400</span>:      <span class="ch">#CED4DA</span>;
+  <span class="cp">--color-neutral-500</span>:      <span class="ch">#ADB5BD</span>;
+  <span class="cp">--color-neutral-600</span>:      <span class="ch">#868E96</span>;
+  <span class="cp">--color-neutral-700</span>:      <span class="ch">#495057</span>;
+  <span class="cp">--color-neutral-800</span>:      <span class="ch">#343A40</span>;
+  <span class="cp">--color-neutral-900</span>:      <span class="ch">#212529</span>;
+
+  <span class="cc">/* ── COLOR: BASE ─────────────────────────────────────────── */</span>
+  <span class="cp">--color-white</span>:            <span class="ch">#FFFFFF</span>;
+  <span class="cp">--color-black</span>:            <span class="ch">#0D0D0F</span>;
+
+  <span class="cc">/* ── COLOR: SEMANTIC ─────────────────────────────────────── */</span>
+  <span class="cp">--color-success</span>:          <span class="ch">#16A34A</span>;
+  <span class="cp">--color-warning</span>:          <span class="ch">#D97706</span>;
+  <span class="cp">--color-error</span>:            <span class="ch">#DC2626</span>;
+  <span class="cp">--color-info</span>:             <span class="ch">#0A84FF</span>;
+
+  <span class="cc">/* ── GRADIENTS ───────────────────────────────────────────── */</span>
+  <span class="cp">--gradient-brand</span>:  <span class="cv">linear-gradient(135deg, #F0647A 0%, #D83562 50%, #BF1040 100%)</span>;
+  <span class="cp">--gradient-brand-h</span>:<span class="cv">linear-gradient(90deg, #F0647A 0%, #BF1040 100%)</span>;
+  <span class="cp">--gradient-dark</span>:   <span class="cv">linear-gradient(180deg, #141416 0%, #0A0A0B 100%)</span>;
+
+  <span class="cc">/* ── TYPOGRAPHY ──────────────────────────────────────────── */</span>
+  <span class="cp">--font-heading</span>: <span class="cv">'Orbitron', 'Segoe UI', Arial, sans-serif</span>;
+  <span class="cp">--font-body</span>:    <span class="cv">'Poppins', 'Segoe UI', Helvetica, Arial, sans-serif</span>;
+  <span class="cp">--font-mono</span>:    <span class="cv">'JetBrains Mono', 'Fira Code', 'Courier New', monospace</span>;
+
+  <span class="cc">/* ── FONT SIZE ───────────────────────────────────────────── */</span>
+  <span class="cp">--text-xs</span>:<span class="cv">0.6875rem</span>; <span class="cp">--text-sm</span>:<span class="cv">0.75rem</span>;   <span class="cp">--text-ui</span>:<span class="cv">0.8125rem</span>;
+  <span class="cp">--text-body-sm</span>:<span class="cv">0.875rem</span>; <span class="cp">--text-base</span>:<span class="cv">1rem</span>; <span class="cp">--text-lg</span>:<span class="cv">1.125rem</span>;
+  <span class="cp">--text-xl</span>:<span class="cv">1.25rem</span>;  <span class="cp">--text-2xl</span>:<span class="cv">1.375rem</span>; <span class="cp">--text-3xl</span>:<span class="cv">1.75rem</span>;
+  <span class="cp">--text-4xl</span>:<span class="cv">2.375rem</span>; <span class="cp">--text-5xl</span>:<span class="cv">3.25rem</span>; <span class="cp">--text-6xl</span>:<span class="cv">4.5rem</span>;
+
+  <span class="cc">/* ── FONT WEIGHT ─────────────────────────────────────────── */</span>
+  <span class="cp">--weight-light</span>:<span class="cv">300</span>; <span class="cp">--weight-regular</span>:<span class="cv">400</span>; <span class="cp">--weight-medium</span>:<span class="cv">500</span>;
+  <span class="cp">--weight-semibold</span>:<span class="cv">600</span>; <span class="cp">--weight-bold</span>:<span class="cv">700</span>; <span class="cp">--weight-extrabold</span>:<span class="cv">800</span>; <span class="cp">--weight-black</span>:<span class="cv">900</span>;
+
+  <span class="cc">/* ── SPACING ─────────────────────────────────────────────── */</span>
+  <span class="cp">--space-1</span>:<span class="cv">4px</span>;  <span class="cp">--space-2</span>:<span class="cv">8px</span>;  <span class="cp">--space-3</span>:<span class="cv">12px</span>; <span class="cp">--space-4</span>:<span class="cv">16px</span>;
+  <span class="cp">--space-6</span>:<span class="cv">24px</span>; <span class="cp">--space-8</span>:<span class="cv">32px</span>; <span class="cp">--space-12</span>:<span class="cv">48px</span>; <span class="cp">--space-16</span>:<span class="cv">64px</span>;
+  <span class="cp">--space-20</span>:<span class="cv">80px</span>; <span class="cp">--space-24</span>:<span class="cv">96px</span>; <span class="cp">--space-32</span>:<span class="cv">128px</span>;
+
+  <span class="cc">/* ── BORDER RADIUS (derived from logo icon ~14px) ────────── */</span>
+  <span class="cp">--radius-sm</span>:<span class="cv">4px</span>;  <span class="cp">--radius-md</span>:<span class="cv">8px</span>;   <span class="cp">--radius-lg</span>:<span class="cv">14px</span>;
+  <span class="cp">--radius-xl</span>:<span class="cv">20px</span>; <span class="cp">--radius-2xl</span>:<span class="cv">28px</span>; <span class="cp">--radius-full</span>:<span class="cv">9999px</span>;
+
+  <span class="cc">/* ── SHADOW ──────────────────────────────────────────────── */</span>
+  <span class="cp">--shadow-sm</span>:   <span class="cv">0 1px 3px rgba(13,13,15,.08)</span>;
+  <span class="cp">--shadow-md</span>:   <span class="cv">0 4px 12px rgba(13,13,15,.10), 0 2px 6px rgba(13,13,15,.06)</span>;
+  <span class="cp">--shadow-lg</span>:   <span class="cv">0 8px 24px rgba(13,13,15,.12), 0 4px 8px rgba(13,13,15,.06)</span>;
+  <span class="cp">--shadow-xl</span>:   <span class="cv">0 20px 48px rgba(13,13,15,.16), 0 8px 16px rgba(13,13,15,.08)</span>;
+  <span class="cp">--shadow-brand</span>:<span class="cv">0 8px 32px rgba(191,16,64,.25)</span>;
+
+  <span class="cc">/* ── TRANSITION ──────────────────────────────────────────── */</span>
+  <span class="cp">--ease-default</span>:<span class="cv">cubic-bezier(0.4,0,0.2,1)</span>;
+  <span class="cp">--duration-fast</span>:<span class="cv">150ms</span>; <span class="cp">--duration-base</span>:<span class="cv">250ms</span>; <span class="cp">--duration-slow</span>:<span class="cv">400ms</span>;
+
+  <span class="cc">/* ── Z-INDEX ─────────────────────────────────────────────── */</span>
+  <span class="cp">--z-base</span>:<span class="cv">0</span>; <span class="cp">--z-raised</span>:<span class="cv">10</span>; <span class="cp">--z-dropdown</span>:<span class="cv">100</span>; <span class="cp">--z-sticky</span>:<span class="cv">200</span>;
+  <span class="cp">--z-overlay</span>:<span class="cv">300</span>; <span class="cp">--z-modal</span>:<span class="cv">400</span>; <span class="cp">--z-toast</span>:<span class="cv">500</span>; <span class="cp">--z-tooltip</span>:<span class="cv">600</span>;
+}
+
+<span class="cs2">[data-theme="dark"]</span> {
+  <span class="cp">--color-bg</span>:               <span class="ch">#0A0A0B</span>;
+  <span class="cp">--color-surface</span>:          <span class="ch">#141416</span>;
+  <span class="cp">--color-surface-elevated</span>: <span class="ch">#1E1E22</span>;
+  <span class="cp">--color-border</span>:           <span class="ch">#2A2A2E</span>;
+  <span class="cp">--color-text</span>:             <span class="ch">#F0F0F2</span>;
+  <span class="cp">--color-text-secondary</span>:   <span class="ch">#9B9BA8</span>;
+  <span class="cp">--color-primary</span>:          <span class="ch">#E8435C</span>;
+  <span class="cp">--color-accent</span>:           <span class="ch">#3B9EFF</span>;
+  <span class="cp">--shadow-brand</span>:           <span class="cv">0 8px 32px rgba(232,67,92,.30)</span>;
+}</div>
+
+  <div class="sub-title">Brand Kit Folder Structure</div>
+  <div class="folder-tree">
+<span class="ft-dir">/Vertex-Automations-Brand-Kit/</span>
+│
+├── <span class="ft-dir">/01-Logo/</span>
+│   ├── <span class="ft-dir">/SVG/</span>
+│   │   ├── <span class="ft-file">logo-primary-color-horizontal.svg</span>
+│   │   ├── <span class="ft-file">logo-primary-color-stacked.svg</span>
+│   │   ├── <span class="ft-file">logo-icon-color.svg</span>
+│   │   ├── <span class="ft-file">logo-reversed-white-horizontal.svg</span>
+│   │   ├── <span class="ft-file">logo-reversed-white-stacked.svg</span>
+│   │   ├── <span class="ft-file">logo-single-black-horizontal.svg</span>
+│   │   └── <span class="ft-file">logo-grayscale-horizontal.svg</span>
+│   ├── <span class="ft-dir">/PNG/</span>
+│   │   ├── <span class="ft-file">logo-primary-color-horizontal@1x.png  @2x.png  @3x.png</span>
+│   │   ├── <span class="ft-file">favicon-16x16.png  favicon-32x32.png  favicon-64x64.png</span>
+│   │   ├── <span class="ft-file">app-icon-512x512.png  app-icon-1024x1024.png</span>
+│   │   └── <span class="ft-file">social-avatar-400x400.png  social-avatar-200x200.png</span>
+│   └── <span class="ft-dir">/PDF/</span>
+│       └── <span class="ft-file">logo-all-variants-print-ready.pdf</span>
+│
+├── <span class="ft-dir">/02-Color/</span>
+│   ├── <span class="ft-file">brand-color-palette.ase</span>  <span class="ft-cm">← Adobe Swatch Exchange</span>
+│   ├── <span class="ft-file">brand-color-palette.clr</span>  <span class="ft-cm">← macOS / Sketch / Figma</span>
+│   └── <span class="ft-file">brand-colors.css</span>
+│
+├── <span class="ft-dir">/03-Typography/</span>
+│   ├── <span class="ft-dir">/Fonts/</span>
+│   │   ├── <span class="ft-file">Orbitron-Bold.ttf  Orbitron-ExtraBold.ttf  Orbitron-SemiBold.ttf</span>
+│   │   └── <span class="ft-file">Poppins-Regular.ttf  Poppins-Medium.ttf  Poppins-SemiBold.ttf  Poppins-Bold.ttf</span>
+│   └── <span class="ft-file">typography-system.css</span>
+│
+├── <span class="ft-dir">/04-Patterns/</span>
+│   └── <span class="ft-file">pattern-light.svg  pattern-dark.svg  pattern-accent.svg</span>
+│
+├── <span class="ft-dir">/05-Tokens/</span>
+│   ├── <span class="ft-file">tokens.css</span>  <span class="ft-cm">← The block above</span>
+│   ├── <span class="ft-file">tokens.json</span>  <span class="ft-cm">← Style Dictionary compatible</span>
+│   └── <span class="ft-file">tokens-figma.json</span>  <span class="ft-cm">← Figma Tokens plugin</span>
+│
+└── <span class="ft-dir">/06-Guidelines/</span>
+    └── <span class="ft-file">Vertex-Automations-Brand-Identity-Guidelines.pdf</span></div>
+
+  <div class="sub-title">Asset Naming Convention</div>
+  <div class="code-blk"><span class="cc">Format: [asset-type]-[variant]-[color-mode]-[orientation][@scale].[ext]
+
+✅  logo-primary-color-horizontal@2x.png
+✅  logo-reversed-white-stacked.svg
+✅  logo-icon-color.svg
+✅  pattern-brand-dark@2x.png
+✅  favicon-32x32.png
+
+Rules:
+— Always lowercase · hyphen-separated · no spaces · no underscores
+— Always include color mode: color / white / black / grayscale
+— Always suffix @2x / @3x on raster screen files
+— SVG files never need @scale (infinitely scalable)
+— Never use: final · v2 · new · updated · date stamps in filenames</span></div>
+
+  <div style="background:var(--dark-bg);border-radius:var(--r-lg);padding:48px;text-align:center;margin-top:40px">
+    <div style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--n600);margin-bottom:16px">Brand Identity System — Complete</div>
+    <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;background:linear-gradient(135deg,#F0647A,#BF1040);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:.06em;margin-bottom:8px">VERTEX AUTOMATIONS</div>
+    <div style="font-size:13px;color:var(--n600);margin-bottom:28px">All six deliverables confirmed · Version 1.0 · April 2026</div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <span style="background:#1E1E22;color:#F0F0F2;padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600">🎨 Color System</span>
+      <span style="background:#1E1E22;color:#F0F0F2;padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600">🔤 Typography</span>
+      <span style="background:#1E1E22;color:#F0F0F2;padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600">📐 Logo Guidelines</span>
+      <span style="background:#1E1E22;color:#F0F0F2;padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600">🗣️ Brand Voice</span>
+      <span style="background:#1E1E22;color:#F0F0F2;padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600">✨ Pattern System</span>
+      <span style="background:#1E1E22;color:#F0F0F2;padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600">📁 Design Tokens</span>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
